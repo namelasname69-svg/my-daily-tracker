@@ -147,3 +147,112 @@ header p {
 .habit-item:hover .delete-btn {
     opacity: 1;
 }
+/* ตกแต่งกล่องบันทึกหมายเหตุ */
+.note-section {
+    margin-top: 25px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+.note-section h2, .calendar-section h2 {
+    font-size: 16px;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+#daily-note-input {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+    resize: none; /* ห้ามลากปรับขนาดกล่อง */
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+#daily-note-input:focus {
+    border-color: #10b981;
+}
+#save-note-btn {
+    background-color: #4f46e5; /* สีน้ำเงินอินดิโก้ */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+#save-note-btn:hover {
+    background-color: #4338ca;
+}
+
+/* ตกแต่งส่วนปฏิทิน */
+.calendar-section {
+    margin-top: 25px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+.calendar-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.calendar-day {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 4px;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.calendar-day:hover {
+    transform: scale(1.05);
+}
+.calendar-day .day-label {
+    color: #718096;
+    margin-bottom: 5px;
+}
+/* เม็ดสีแสดงระดับความสำเร็จ */
+.calendar-day .status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #cbd5e1; /* สีเทา = ยังไม่ได้ทำ */
+}
+.calendar-day.pct-low .status-dot { background-color: #a7f3d0; }  /* เขียวอ่อนมาก */
+.calendar-day.pct-mid .status-dot { background-color: #34d399; }  /* เขียวกลาง */
+.calendar-day.pct-full .status-dot { background-color: #10b981; } /* เขียวเข้ม (100%) */
+
+/* กล่องแสดงรายละเอียดประวัติเมื่อกดคลิก */
+.history-detail {
+    background-color: #f8f9fa;
+    border-left: 4px solid #4f46e5;
+    padding: 12px;
+    border-radius: 0 12px 12px 0;
+    margin-top: 10px;
+}
+.history-date {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4a5568;
+    margin: 0 0 5px 0;
+}
+.history-note {
+    font-size: 13px;
+    color: #4a5568;
+    margin: 0;
+    font-style: italic;
+}
+.hidden {
+    display: none;
+}
