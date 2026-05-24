@@ -256,3 +256,59 @@ header p {
 .hidden {
     display: none;
 }
+/* โค้ดเดิมทั้งหมดของคุณยังอยู่ แล้วนำส่วนนี้ไปวางต่อท้ายสุดครับ */
+
+/* ปรับส่วนหัวให้มี Streak อยู่ฝั่งขวา */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.streak-badge {
+    background-color: #fef3c7;
+    color: #d97706;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #fcd34d;
+}
+
+/* ปรับฟอร์มเพิ่มกิจกรรมให้รองรับกล่อง Dropdown */
+#add-habit-form {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+#category-input {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+/* แท็กสีสไตล์แยกประเภทกิจกรรม */
+.habit-item.cat-health { border-left: 5px solid #ef4444; }  /* สีแดง สุขภาพ */
+.habit-item.cat-growth { border-left: 5px solid #3b82f6; }  /* สีน้ำเงิน พัฒนาตัวเอง */
+.habit-item.cat-routine { border-left: 5px solid #10b981; } /* สีเขียว กิจวัตรทั่วไป */
+
+/* ปุ่มเคลียร์ข้อมูลทั้งหมดด้านล่างสุด */
+.app-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.clear-all-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.clear-all-btn:hover {
+    color: #ef4444;
+}
