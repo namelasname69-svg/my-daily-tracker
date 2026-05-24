@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Habit Tracker & Journal</title>
+    <title>Daily Habit Tracker & Journal Pro</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
     <div class="app-container">
         
         <header>
-            <h1>My Daily Tasks</h1>
+            <div class="header-main">
+                <h1>My Daily Tasks</h1>
+                <div class="streak-badge">🔥 <span id="streak-count">0</span> วัน</div>
+            </div>
             <p id="date-text">วันนี้</p>
         </header>
 
@@ -28,6 +32,11 @@
         <section class="add-habit-section">
             <form id="add-habit-form">
                 <input type="text" id="habit-input" placeholder="พิมพ์กิจกรรมใหม่..." required>
+                <select id="category-input">
+                    <option value="health">🔴 สุขภาพ</option>
+                    <option value="growth">🔵 พัฒนาตัวเอง</option>
+                    <option value="routine">🟢 ทั่วไป</option>
+                </select>
                 <button type="submit" id="add-button">+</button>
             </form>
         </section>
@@ -45,13 +54,16 @@
 
         <section class="calendar-section">
             <h2>ประวัติย้อนหลัง 7 วัน</h2>
-            <div id="calendar-grid" class="calendar-grid">
-                </div>
+            <div id="calendar-grid" class="calendar-grid"></div>
             <div id="history-detail" class="history-detail hidden">
                 <p id="history-date" class="history-date"></p>
                 <p id="history-note" class="history-note"></p>
             </div>
         </section>
+
+        <footer class="app-footer">
+            <button id="clear-all-btn" class="clear-all-btn">🗑️ ล้างข้อมูลแอปทั้งหมด</button>
+        </footer>
 
     </div>
 
