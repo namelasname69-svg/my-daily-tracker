@@ -1,0 +1,149 @@
+/* ตั้งค่าฟอนต์และพื้นหลังของทั้งหน้าเว็บ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* กล่องจำลองหน้าจอมือถือ */
+.app-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* ส่วนหัว */
+header h1 {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 24px;
+}
+header p {
+    color: #666;
+    margin: 5px 0 20px 0;
+    font-size: 14px;
+}
+
+/* แถบความคืบหน้า (Progress Bar) */
+.progress-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4a5568;
+}
+.progress-bar-bg {
+    background-color: #e2e8f0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+/* แถบสีที่จะวิ่งตอนเราติ๊กถูก */
+#progress-bar-fill {
+    background-color: #10b981; /* สีเขียว */
+    width: 0%; /* เริ่มต้นที่ 0% */
+    height: 100%;
+    transition: width 0.3s ease; /* ทำให้แถบขยับแบบนุ่มนวล */
+}
+
+/* รายการสิ่งที่ต้องทำ */
+.todo-section h2 {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+#habit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.habit-item {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+}
+/* เมื่อเอาเมาส์ไปชี้ให้ขยับนิดหน่อย */
+.habit-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+.habit-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+.habit-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+/* ตกแต่งส่วนฟอร์มเพิ่มกิจกรรม */
+.add-habit-section {
+    margin-bottom: 25px;
+}
+#add-habit-form {
+    display: flex;
+    gap: 10px; /* เว้นระยะห่างระหว่างกล่องพิมพ์กับปุ่ม */
+}
+#habit-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+#habit-input:focus {
+    border-color: #10b981; /* เปลี่ยนเป็นสีเขียวเมื่อกำลังพิมพ์ */
+}
+#add-button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#add-button:hover {
+    background-color: #059669; /* เข้มขึ้นเมื่อเอาเมาส์ชี้ */
+}
+
+/* เพิ่มปุ่มลบกิจกรรม (ถังขยะ) */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: auto; /* ดันไปขวาสุด */
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+.habit-item:hover .delete-btn {
+    opacity: 1;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Tracker ของฉัน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header>
+            <h1>My Daily Tasks</h1>
+            <p id="date-text">วันนี้</p>
+        </header>
+
+        <!-- ส่วนแสดงความคืบหน้า -->
+        <section class="progress-section">
+            <div class="progress-info">
+                <span>ความคืบหน้าวันนี้</span>
+                <span id="progress-percentage">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div id="progress-bar-fill"></div>
+            </div>
+        </section>
+
+        <!-- [เพิ่มเข้ามาใหม่] ส่วนสำหรับเพิ่มกิจกรรม -->
+        <section class="add-habit-section">
+            <form id="add-habit-form">
+                <input type="text" id="habit-input" placeholder="พิมพ์กิจกรรมใหม่ เช่น วิ่ง 5 กม..." required>
+                <button type="submit" id="add-button">+</button>
+            </form>
+        </section>
+
+        <!-- ส่วนรายการเช็คลิสต์ (ปล่อยให้ว่างไว้ เดี๋ยวจะใช้ JS ใส่ข้อมูลให้) -->
+        <section class="todo-section">
+            <h2>สิ่งที่ต้องทำ</h2>
+            <ul id="habit-list"></ul>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
