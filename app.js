@@ -34,8 +34,8 @@ function initDate() {
         
         // รายการเริ่มต้นชุดใหม่ตามที่คุณสั่งเป๊ะๆ แยกหมวดหมู่ชัดเจน
         let templateHabits = [
-            { text: '🏃‍♂️ วิ่งออกกำลังกาย', checked: false, category: 'health' },
-            { text: '💪 เล่นฟิตเนส', checked: false, category: 'health' },
+            { text: '🏃‍♂️ วิ่ง', checked: false, category: 'health' },
+            { text: '💪 ฟิตเนส', checked: false, category: 'health' },
             { text: '👟 เดินครบ 10,000 ก้าว', checked: false, category: 'health' },
             { text: '📚 อ่านหนังสือ 15 นาที', checked: false, category: 'growth' },
             { text: '🇬🇧 เรียนภาษาอังกฤษ 1 บท', checked: false, category: 'growth' }
