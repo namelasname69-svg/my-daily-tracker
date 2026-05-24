@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Habit Tracker ของฉัน</title>
+    <title>Daily Habit Tracker & Journal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,6 @@
             <p id="date-text">วันนี้</p>
         </header>
 
-        <!-- ส่วนแสดงความคืบหน้า -->
         <section class="progress-section">
             <div class="progress-info">
                 <span>ความคืบหน้าวันนี้</span>
@@ -26,18 +25,32 @@
             </div>
         </section>
 
-        <!-- [เพิ่มเข้ามาใหม่] ส่วนสำหรับเพิ่มกิจกรรม -->
         <section class="add-habit-section">
             <form id="add-habit-form">
-                <input type="text" id="habit-input" placeholder="พิมพ์กิจกรรมใหม่ เช่น วิ่ง 5 กม..." required>
+                <input type="text" id="habit-input" placeholder="พิมพ์กิจกรรมใหม่..." required>
                 <button type="submit" id="add-button">+</button>
             </form>
         </section>
 
-        <!-- ส่วนรายการเช็คลิสต์ (ปล่อยให้ว่างไว้ เดี๋ยวจะใช้ JS ใส่ข้อมูลให้) -->
         <section class="todo-section">
             <h2>สิ่งที่ต้องทำ</h2>
             <ul id="habit-list"></ul>
+        </section>
+
+        <section class="note-section">
+            <h2>บันทึกของวันนี้</h2>
+            <textarea id="daily-note-input" placeholder="วันนี้เป็นอย่างไรบ้าง? บันทึกเรื่องราวสั้นๆ ที่นี่..."></textarea>
+            <button id="save-note-btn">บันทึกหมายเหตุ</button>
+        </section>
+
+        <section class="calendar-section">
+            <h2>ประวัติย้อนหลัง 7 วัน</h2>
+            <div id="calendar-grid" class="calendar-grid">
+                </div>
+            <div id="history-detail" class="history-detail hidden">
+                <p id="history-date" class="history-date"></p>
+                <p id="history-note" class="history-note"></p>
+            </div>
         </section>
 
     </div>
